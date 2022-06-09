@@ -1,0 +1,60 @@
+<link rel="stylesheet" href="https://unpkg.com/primeflex@3.1.2/primeflex.css">
+
+<div class="background">
+
+  <div class="card">
+    <p-dataView #dv [value]="categorias" [paginator]="true" [rows]="9" filterBy="name" layout="grid">
+      <ng-template pTemplate="header">
+        <div class="banner">
+        <h1>Categorias</h1>
+        <button pButton pRipple icon="pi pi-plus" (click)="abrirModal()"
+          class="p-button-rounded p-button-secondary"></button>
+          </div>
+      </ng-template>
+
+      <ng-template let-product pTemplate="gridItem">
+        <div class="p-col-12 p-md-4">
+          <div class="product-grid-item card">
+            <div class="product-grid-item-top">
+              <p class="product-name">{{product.nombre}}</p>
+              <p class="product-price">${{product.valor}}</p>
+            </div>
+            <div class="product-grid-item-content">
+              <button pButton pRipple icon="pi pi-trash" (click)="eliminarCategoria(product)"
+                class="p-button-rounded p-button-danger"></button>
+              <button pButton pRipple icon="pi pi-pencil" (click)="obtenerCategoriasById(product)"
+                class="p-button-rounded p-button-primary"></button>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+
+    </p-dataView>
+
+  </div>
+
+</div>
+
+<p-dialog [(visible)]="displayModal" header="Formulario Categoria" [modal]="true" styleClass="p-fluid">
+
+  <ng-template pTemplate="content">
+
+    <div class="formgrid grid">
+      <div class="field col">
+        <label for="lastname2">Nombre</label>
+        <input id="float-input" type="text" [(ngModel)]="categoriaForm.nombre" pInputText>
+      </div>
+      <div class="field col">
+        <label for="lastname2">Valor</label>
+        <input id="float-input" type="text" [(ngModel)]="categoriaForm.valor" pInputText>
+      </div>
+    </div>
+
+  </ng-template>
+
+  <ng-template pTemplate="footer">
+    <button pButton pRipple label="Cancel" icon="pi pi-times" (click)="cerrarModal()" class="p-button-warning"></button>
+    <button pButton pRipple label="Save" icon="pi pi-check" (click)="confirmar()" class="p-button-success"></button>
+  </ng-template>
+
+</p-dialog>

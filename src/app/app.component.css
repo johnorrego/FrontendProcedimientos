@@ -1,0 +1,59 @@
+.card {
+  /* padding: 2rem; */
+  margin: 2rem;
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  /* margin-bottom: 2rem; */
+}
+
+
+.product-grid-item {
+  margin: .5em;
+  border: 1px solid #e3e7eb;
+}
+
+
+.product-grid-item-content {
+  text-align: center;
+}
+
+.product-price {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  align-self: flex-end;
+  text-align: center;
+}
+
+.product-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.p-button {
+  margin-bottom: 1rem;
+  margin-left: .5rem;
+}
+
+.background {
+  background-color: rgb(222, 225, 228);
+  position: relative;
+  background-attachment: fixed;
+  padding: 30px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 5rem;
+  color: white;
+}
+
+.banner {
+  background-image: radial-gradient(circle at -19.91% 50%, #ffff9e 0,
+      #ebffa7 7.14%, #d2ffb0 14.29%, #b7ffb9 21.43%, #9affc1 28.57%,
+      #7cffc6 35.71%, #5dffc9 42.86%, #3cf2c9 50%, #0ee0c7 57.14%,
+      #00d1c5 64.29%, #00c4c3 71.43%, #00b9c2 78.57%, #00b1c3 85.71%,
+      #00abc4 92.86%, #00a6c7 100%);
+  padding: 1px;
+}
